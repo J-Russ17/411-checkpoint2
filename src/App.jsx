@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Provider store={store}>
-        <NavMenu />
+        <NavMenu isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
         <Router
           isLoggedIn={isLoggedIn}
           setIsLoggedIn={setIsLoggedIn}
