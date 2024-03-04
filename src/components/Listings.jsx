@@ -21,8 +21,8 @@ export default function Listings(props) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {console.log(props.restaurant)}
-          {props.restaurant.map((item) => (
+          {console.log(props.restaurants)}
+          {props.restaurants.map((item) => (
             <TableRow
               key={item.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}

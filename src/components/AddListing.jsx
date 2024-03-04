@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, TextField } from "@mui/material";
 
-function AddListing({ addListing, restaurants }) {
+function AddListing(props) {
   const [listing, setListing] = useState({
     name: "",
     description: "",
@@ -10,18 +10,18 @@ function AddListing({ addListing, restaurants }) {
   });
 
   const handleChange = (event) => {
-    const newListing = { ...listing };
-    newListing[event.target.id] = event.target.value;
-    setListing(newListing);
+    const newState = { ...listing };
+    newState[event.target.id] = event.target.value;
+    setListing(newState);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const payload = { ...listing };
-    payload.id = restaurants.length + 1;
+    payload.id = props.restaurants.length + 1;
     delete payload.open;
     console.log(payload);
-    addListing(payload);
+    props.addListing(payload);
     setListing({
       name: "",
       description: "",

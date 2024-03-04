@@ -21,10 +21,7 @@ function Router(props) {
   return (
     <>
       <Routes>
-        <Route
-          path="/"
-          element={<Listings restaurant={data} setRestaurant={data} />}
-        />
+        <Route path="/" element={<Listings />} />
         <Route
           path="/login"
           element={
@@ -34,15 +31,7 @@ function Router(props) {
             />
           }
         />
-        <Route
-          path="/details/:id"
-          element={
-            <BusinessDetails
-              restaurant={props.restaurant}
-              setRestaurant={props.setRestaurant}
-            />
-          }
-        />
+        <Route path="/details/:id" element={<BusinessDetails />} />
         <Route
           path="/adminview"
           element={
