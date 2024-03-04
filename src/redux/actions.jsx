@@ -4,3 +4,10 @@ export const addListing = (newListing) => {
     value: newListing,
   };
 };
+
+export const deleteListing = (index) => {
+  return {
+    type: "DELETE_LISTING",
+    value: index,
+  };
+};

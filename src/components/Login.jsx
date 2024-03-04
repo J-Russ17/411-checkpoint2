@@ -24,7 +24,7 @@ export default function Login(props) {
       <TextField id="standard-basic" label="Username" variant="standard" />
       <TextField id="standard-basic" label="Password" variant="standard" />
       <Button variant="contained" onClick={() => props.setIsLoggedIn(true)}>
-        <Link to="/adminview">Login</Link>
+        <Link to="/">Login</Link>
       </Button>
     </Box>
   );

@@ -9,7 +9,7 @@ import Login from "./Login";
 // import IconButton from "@mui/material/IconButton";
 // import MenuIcon from "@mui/icons-material/Menu";
 
-export default function NavMenu() {
+export default function NavMenu(props) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ backgroundColor: "green" }}>
@@ -20,10 +20,25 @@ export default function NavMenu() {
           <Button color="inherit">
             <Link to="/">Listings</Link>
           </Button>
-
-          <Button color="inherit">
-            <Link to="/login">Login </Link>
-          </Button>
+          {props.isLoggedIn === true ? (
+            <>
+              <Button>
+                <Link to="/addlisting">Add</Link>
+              </Button>
+              <Button
+                onClick={() => {
+                  props.setIsLoggedIn(false);
+                }}
+                color="inherit"
+              >
+                <Link to="/login">Logout </Link>
+              </Button>
+            </>
+          ) : (
+            <Button color="inherit">
+              <Link to="/login">Login </Link>
+            </Button>
+          )}
         </Toolbar>
       </AppBar>
     </Box>

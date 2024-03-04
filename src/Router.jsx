@@ -3,8 +3,6 @@ import { Routes, Route, Navigate } from "react-router";
 import BusinessDetails from "./components/BusinessDetails";
 import Listings from "./containers/Listings";
 import Login from "./components/Login";
-import data from "./data";
-import AdminView from "./components/AdminView";
 import AddListing from "./containers/AddListing";
 
 const ProtectedRoute = (props) => {
@@ -21,7 +19,15 @@ function Router(props) {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Listings />} />
+        <Route
+          path="/"
+          element={
+            <Listings
+              isLoggedIn={props.isLoggedIn}
+              setIsLoggedIn={props.setIsLoggedIn}
+            />
+          }
+        />
         <Route
           path="/login"
           element={
@@ -32,7 +38,7 @@ function Router(props) {
           }
         />
         <Route path="/details/:id" element={<BusinessDetails />} />
-        <Route
+        {/* <Route
           path="/adminview"
           element={
             <ProtectedRoute
@@ -42,7 +48,7 @@ function Router(props) {
               component={AdminView}
             />
           }
-        />
+        /> */}
         <Route
           path="/addlisting"
           element={

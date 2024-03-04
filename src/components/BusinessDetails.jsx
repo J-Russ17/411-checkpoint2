@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router";
 import data from "../data";
+import MyComponent from "./GoogleMaps";
 
 function BusinessDetails(props) {
   let { id } = useParams();
@@ -14,6 +15,7 @@ function BusinessDetails(props) {
       <h2>{details.address}</h2>
       <h3>{details.operating_hours}</h3>
       <p>{details.description}</p>
+      <MyComponent />
     </div>
   );
 }
