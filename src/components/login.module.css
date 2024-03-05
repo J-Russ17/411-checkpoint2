@@ -3,3 +3,13 @@
   display: grid;
   gap: 16px;
 }
+
+.loginButton {
+  background-color: grey;
+}
+
+.loginLink {
+  color: black;
+  text-decoration: none;
+  width: 100%;
+}

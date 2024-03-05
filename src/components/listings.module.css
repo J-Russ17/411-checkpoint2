@@ -1,3 +1,14 @@
+.container {
+  margin: 2% 5%;
+}
+
 .link {
   color: black;
+}
+
+.loginRequired {
+  margin-top: 6%;
+  display: block;
+  display: flex;
+  justify-content: center;
 }

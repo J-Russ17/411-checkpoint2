@@ -14,8 +14,8 @@ export default function Listings(props) {
   console.log(props);
   return (
     <>
-      <div>
-        <TableContainer className={styles.container} component={Paper}>
+      <div className={styles.container}>
+        <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
@@ -56,7 +56,9 @@ export default function Listings(props) {
           </Table>
         </TableContainer>
         {props.isLoggedIn === false ? (
-          <p>*Must be logged in to add/delete a listing*</p>
+          <p className={styles.loginRequired}>
+            *Must be logged in to add/delete a listing*
+          </p>
         ) : null}
       </div>
     </>

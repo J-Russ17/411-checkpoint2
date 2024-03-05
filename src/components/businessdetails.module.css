@@ -1,0 +1,17 @@
+/* businessdetails.module.css */
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.mapContainer {
+  margin-top: 20px; /* Adjust as needed */
+  margin-left: 24%;
+  height: 400px;
+  width: 50%;
+}

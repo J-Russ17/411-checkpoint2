@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { useParams } from "react-router";
 import data from "../data";
 import { Container } from "@mui/material";
+import styles from "./businessdetails.module.css";
 
 function BusinessDetails(props) {
   let { id } = useParams();
@@ -25,13 +26,13 @@ function BusinessDetails(props) {
   }, [details]);
   console.log(details);
   return (
-    <Container>
+    <Container className={styles.detailsContainer}>
       <div>
         <h1>{details.name}</h1>
         <h2>{details.address}</h2>
         <h3>{details.operating_hours}</h3>
         <p>{details.description}</p>
-        <div style={{ height: "400px", width: "50%" }} ref={mapRef} />
+        <div className={styles.mapContainer} ref={mapRef} />
       </div>
     </Container>
   );

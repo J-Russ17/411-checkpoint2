@@ -17,14 +17,14 @@ export default function NavMenu(props) {
               Austin Small Business
             </Link>
           </Typography>
-          <Button color="inherit">
+          <Button color="inherit" sx={{ textTransform: "none" }}>
             <Link className={styles.link} to="/">
               Listings
             </Link>
           </Button>
           {props.isLoggedIn === true ? (
             <>
-              <Button>
+              <Button color="inherit" sx={{ textTransform: "none" }}>
                 <Link className={styles.link} to="/addlisting">
                   Add
                 </Link>
@@ -34,6 +34,7 @@ export default function NavMenu(props) {
                   props.setIsLoggedIn(false);
                 }}
                 color="inherit"
+                sx={{ textTransform: "none" }}
               >
                 <Link className={styles.link} to="/login">
                   Logout{" "}
@@ -41,7 +42,7 @@ export default function NavMenu(props) {
               </Button>
             </>
           ) : (
-            <Button color="inherit">
+            <Button color="inherit" sx={{ textTransform: "none" }}>
               <Link className={styles.link} to="/login">
                 Login{" "}
               </Link>

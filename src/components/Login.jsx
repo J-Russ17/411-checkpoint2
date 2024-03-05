@@ -13,7 +13,7 @@ export default function Login(props) {
       sx={{
         "& > :not(style)": {
           margin: "0 auto",
-          width: "25ch",
+          width: "75ch",
           display: "flex",
         },
       }}
@@ -23,8 +23,15 @@ export default function Login(props) {
     >
       <TextField id="standard-basic" label="Username" variant="standard" />
       <TextField id="standard-basic" label="Password" variant="standard" />
-      <Button variant="contained" onClick={() => props.setIsLoggedIn(true)}>
-        <Link to="/">Login</Link>
+      <Button
+        className={styles.loginButton}
+        color="grey"
+        variant="contained"
+        onClick={() => props.setIsLoggedIn(true)}
+      >
+        <Link className={styles.loginLink} to="/">
+          Login
+        </Link>
       </Button>
     </Box>
   );
