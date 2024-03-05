@@ -43,6 +43,7 @@ export default function Listings(props) {
                   <TableCell>
                     {props.isLoggedIn === true ? (
                       <DeleteIcon
+                        className={styles.deleteIcon}
                         onClick={() => {
                           props.deleteListing(index);
                         }}

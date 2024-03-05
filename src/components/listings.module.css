@@ -6,6 +6,10 @@
   color: black;
 }
 
+.deleteIcon {
+  color: red;
+}
+
 .loginRequired {
   margin-top: 6%;
   display: block;
