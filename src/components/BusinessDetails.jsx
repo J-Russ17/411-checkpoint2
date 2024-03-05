@@ -2,11 +2,9 @@ import React, { useRef, useEffect } from "react";
 import { useParams } from "react-router";
 import data from "../data";
 import { Container } from "@mui/material";
-// import MyComponent from "./GoogleMaps";
 
 function BusinessDetails(props) {
   let { id } = useParams();
-  // console.log(id);
 
   const details = data.find((item) => item.id === Number(id));
 
@@ -33,7 +31,6 @@ function BusinessDetails(props) {
         <h2>{details.address}</h2>
         <h3>{details.operating_hours}</h3>
         <p>{details.description}</p>
-        {/* <MyComponent /> */}
         <div style={{ height: "400px", width: "50%" }} ref={mapRef} />
       </div>
     </Container>
