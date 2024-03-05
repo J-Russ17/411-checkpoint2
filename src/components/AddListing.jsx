@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, TextField } from "@mui/material";
+import styles from "./addlisting.module.css";
 
 function AddListing(props) {
   const [listing, setListing] = useState({
@@ -32,40 +33,44 @@ function AddListing(props) {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className={styles.formContainer} onSubmit={handleSubmit}>
         <TextField
           name="name"
           label="Name"
           type="text"
-          id="name"
+          id="standard-basic"
           value={listing.name}
           onChange={handleChange}
+          variant="standard"
         />
         <TextField
           name="address"
           label="Address"
           type="text"
-          id="address"
+          id="standard-basic"
           value={listing.address}
           onChange={handleChange}
+          variant="standard"
         />
         <TextField
           name="hours"
           label="Hours"
           type="text"
-          id="operating_hours"
+          id="standard-basic"
           value={listing.operating_hours}
           onChange={handleChange}
+          variant="standard"
         />
         <TextField
           name="description"
           label="Description"
           type="text"
-          id="description"
+          id="standard-basic"
           value={listing.description}
           onChange={handleChange}
+          variant="standard"
         />
-        <Button type="submit">Add Listing</Button>
+        <Button type="submit">SAVE</Button>
       </form>
     </>
   );
