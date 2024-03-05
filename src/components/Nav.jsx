@@ -5,25 +5,29 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
-import Login from "./Login";
-// import IconButton from "@mui/material/IconButton";
-// import MenuIcon from "@mui/icons-material/Menu";
+import styles from "./nav.module.css";
 
 export default function NavMenu(props) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ backgroundColor: "green" }}>
-        <Toolbar>
+        <Toolbar className={styles.toolbar}>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Link to="/">Austin Small Business</Link>
+            <Link className={styles.link} to="/">
+              Austin Small Business
+            </Link>
           </Typography>
           <Button color="inherit">
-            <Link to="/">Listings</Link>
+            <Link className={styles.link} to="/">
+              Listings
+            </Link>
           </Button>
           {props.isLoggedIn === true ? (
             <>
               <Button>
-                <Link to="/addlisting">Add</Link>
+                <Link className={styles.link} to="/addlisting">
+                  Add
+                </Link>
               </Button>
               <Button
                 onClick={() => {
@@ -31,12 +35,16 @@ export default function NavMenu(props) {
                 }}
                 color="inherit"
               >
-                <Link to="/login">Logout </Link>
+                <Link className={styles.link} to="/login">
+                  Logout{" "}
+                </Link>
               </Button>
             </>
           ) : (
             <Button color="inherit">
-              <Link to="/login">Login </Link>
+              <Link className={styles.link} to="/login">
+                Login{" "}
+              </Link>
             </Button>
           )}
         </Toolbar>

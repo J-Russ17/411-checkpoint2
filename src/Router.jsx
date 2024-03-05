@@ -38,17 +38,7 @@ function Router(props) {
           }
         />
         <Route path="/details/:id" element={<BusinessDetails />} />
-        {/* <Route
-          path="/adminview"
-          element={
-            <ProtectedRoute
-              isLoggedIn={props.isLoggedIn}
-              setIsLoggedIn={props.setIsLoggedIn}
-              background="outlined"
-              component={AdminView}
-            />
-          }
-        /> */}
+
         <Route
           path="/addlisting"
           element={

@@ -1,43 +1,49 @@
 const data = [
   {
     id: 1,
-    name: "Meevee",
-    description:
-      "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
-    address: "3rd Floor",
-    operating_hours: "All day",
+    name: "Major's Burger",
+    description: "Tastiest burgers Liberty Hill has to offer",
+    address: "14011 TX-29, Liberty Hill, TX 78642",
+    operating_hours: "8:30AM-8:30PM",
+    lat: 30.671234720213196,
+    lng: -97.91726872274043,
   },
   {
     id: 2,
-    name: "Quimba",
+    name: "Dahlia Cafe",
     description:
-      "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
-    address: "PO Box 69526",
-    operating_hours: "All day",
+      "Great atmosphere, cheap food, perfect place to take the family",
+    address: "2450 Ranch to Market Rd 1869, Liberty Hill, TX 78642",
+    operating_hours: "11:00am-9:00pm",
+    lat: 30.66956466021054,
+    lng: -97.91034979999999,
   },
   {
     id: 3,
-    name: "Jaxbean",
-    description:
-      "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-    address: "14th Floor",
-    operating_hours: "All day",
+    name: "Liberty Tavern",
+    description: "Locally bar & grill",
+    address: "3000 Ranch to Market Rd 1869, Liberty Hill, TX 78642",
+    operating_hours: "10:00am-10:30pm",
+    lat: 30.666873630061573,
+    lng: -97.91883763068512,
   },
   {
     id: 4,
-    name: "Pixope",
-    description:
-      "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-    address: "Suite 88",
-    operating_hours: "All day",
+    name: "Bella Sera",
+    description: "Authentic Italian Cuisine",
+    address: "13750 TX-29 ste 104, Liberty Hill, TX 78642",
+    operating_hours: "11:00am-9:00pm",
+    lat: 30.669818070583144,
+    lng: -97.9119238,
   },
   {
     id: 5,
-    name: "Linktype",
-    description:
-      "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-    address: "Room 46",
-    operating_hours: "All day",
+    name: "The Thirsty Chicken",
+    description: "Everything chicken",
+    address: "104 W Willis St, Leander, TX 78641",
+    operating_hours: "11:00am-9:00pm",
+    lat: 30.57993406919803,
+    lng: -97.85388551534255,
   },
 ];
 
