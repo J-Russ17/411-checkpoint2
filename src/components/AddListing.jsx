@@ -12,7 +12,7 @@ function AddListing(props) {
 
   const handleChange = (event) => {
     const newState = { ...listing };
-    newState[event.target.id] = event.target.value;
+    newState[event.target.name] = event.target.value; // Using name instead of id
     setListing(newState);
   };
 
@@ -38,7 +38,6 @@ function AddListing(props) {
           name="name"
           label="Name"
           type="text"
-          id="standard-basic"
           value={listing.name}
           onChange={handleChange}
           variant="standard"
@@ -47,16 +46,14 @@ function AddListing(props) {
           name="address"
           label="Address"
           type="text"
-          id="standard-basic"
           value={listing.address}
           onChange={handleChange}
           variant="standard"
         />
         <TextField
-          name="hours"
+          name="operating_hours" // Changed the name to match state property
           label="Hours"
           type="text"
-          id="standard-basic"
           value={listing.operating_hours}
           onChange={handleChange}
           variant="standard"
@@ -65,7 +62,6 @@ function AddListing(props) {
           name="description"
           label="Description"
           type="text"
-          id="standard-basic"
           value={listing.description}
           onChange={handleChange}
           variant="standard"
